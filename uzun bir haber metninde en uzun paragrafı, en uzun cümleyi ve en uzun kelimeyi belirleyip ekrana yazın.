@@ -1,0 +1,40 @@
+"""uzun bir haber metninde en uzun paragrafı, en uzun cümleyi ve en uzun kelimeyi belirleyip ekrana yazın.
+Ayrıca paragrafların ortalama uzunluğu, cümlelerin ortalama uzunluğu ve kelimelerin ortalama uzunluğunu da
+ekrana yazın"""
+metin="""sinecine: Sinema Araştırmaları Dergisi’nde konu sınırlaması bulunmamakla birlikte, çalışmaların yayımlanabilmesi için akademik niteliklere uygunluk aranır. Yazılar özgün olmalıdır; başka bir yerde basılmak üzere kabul edilmiş (ya da daha önce yayımlanmış) yazılar değerlendirilmez. Yayın Kurulu’nun kararıyla her sayıda editör ve danışma kurulundaki üyeler değişebilir.
+sinecine 2020 11 (1) Bahar sayısından itibaren her sayı en fazla 6 makaleden oluşacaktır.
+Altı makale tamamlandıktan sonra kabul alan makaleler bir sonraki sayıya aktarılacaktır. 
+sinecine: Sinema Araştırmaları Dergisi’nde 2019 Bahar (10) 1 sayısından itibaren tezlerden üretilmiş ve tez danışmanının adının yazar olarak yer aldığı makalelere yer verilmemektedir. Tezlerden üretilmiş makaleler sadece tez yazarının adıyla dergiye başvurulduğunda değerlendirmeye alınacaktır.
+sinecine FIAF ve TR DİZİN tarafından taranmaktadır. Bizi Twitter ve Facebook üzerinden de takip edebilirsiniz.
+Bize internet sitemizden de ulaşabilirsiniz: sinecine: Sinema Araştırmaları Dergisi"""
+
+paragraf={i:len(i) for i in metin.split('\n')}
+enUzunParagraf, uzunluk, toplam = "",0 ,0
+for k, v in paragraf.items():
+    if v>uzunluk:
+        uzunluk=v
+        enUzunParagraf=k
+    toplam += v
+print(uzunluk,enUzunParagraf)
+print(toplam/len(paragraf))
+
+metin = metin.replace('\n',' ')
+cumle={i:len(i) for i in metin.split('. ')}
+enUzuncumle, uzunluk, toplam = "",0 ,0
+for k, v in cumle.items():
+    if v>uzunluk:
+        uzunluk=v
+        enUzuncumle=k
+    toplam += v
+print(uzunluk, enUzuncumle)
+print(toplam/len(cumle))
+
+kelime={i:len(i) for i in metin.split(' ')}
+enUzunkelime, uzunluk, toplam = "",0 ,0
+for k, v in kelime.items():
+    if v>uzunluk:
+        uzunluk=v
+        enUzunkelime=k
+    toplam += v
+print(uzunluk, enUzunkelime)
+print(toplam/len(kelime))
