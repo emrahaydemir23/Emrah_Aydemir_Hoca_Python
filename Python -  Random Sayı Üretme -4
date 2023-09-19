@@ -1,0 +1,13 @@
+import random
+
+
+def dosyayaYaz(**parametreler):
+    """parametre olarak verilen dosyaadi tam yoldur. Bu yoldaki dosyaya ikinci parametre olan metni yazar."""
+    f=open("test.txt","a")
+    for k,v in parametreler.items():
+        f.write(str(k)+":\t"+str(v)+"\n")
+    f.close()
+
+#dosyayaYaz("abc","def","ghi","jkl")
+#dosyayaYaz("abc",456,"ghi","jkl","xyz")
+dosyayaYaz(elma=5, armut=7, muz=9)
