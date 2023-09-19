@@ -1,0 +1,7 @@
+Öncelikle rastgele tarih üreten bir metot yazın. Bu metot geriye “18.09.2023 11:28” formatında tarih üretecektir. Tarihlerin tümünün geçerli bir tarih-saat olmasına dikkat edilecektir. 1000 tane rastgele tarih üreten ve txt uzantılı bir dosyaya yazan örnek oluşturun. Örneklerde aşağıdaki gibi farklı özelliklerde metotlar kullanılacaktır.
+-	Metot parametre almayacaktır.
+-	Metot parametre alacaktır.
+-	Metot geriye değer döndürmeyecektir.
+-	Metot geriye değer döndürecektir.
+-	Metot hem parametre alıp hem de geriye değer döndürecektir.
+Not: Tüm metotlarda açıklama olmasına özen gösteriniz.
