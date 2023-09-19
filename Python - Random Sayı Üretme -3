@@ -1,0 +1,19 @@
+mport random
+metin="elma"
+
+def dosyaoku():
+    """Bu metot test.txt dosyasını okuyup geriye okuduğu metni döndürür."""
+    f=open("test.txt","r+")
+    metin=f.read()
+    f.close()
+    return metin,len(metin)
+def dosyayaYaz(dosyaAdi,metin, uzunluk):
+    """parametre olarak verilen dosyaadi tam yoldur. Bu yoldaki dosyaya ikinci parametre olan metni yazar."""
+    f=open(dosyaAdi,"a")
+    f.write(metin+":\t"+str(uzunluk)+"\n")
+    f.close()
+
+dosyayaYaz("test2.txt",uzunluk=5, metin="acb")
+gelenMetin, uzunluk= dosyaoku()
+print(gelenMetin)
+print("toplam karakter sayısı:",uzunluk)
