@@ -1,0 +1,11 @@
+import random
+
+f=open("test.txt","r+")
+#f.write(str(random.randint(1,10))+"\t")
+metin=f.readline()
+print(metin)
+metin=f.readline()
+print(metin)
+f.write("test")
+f.close()
+#print(metin)
