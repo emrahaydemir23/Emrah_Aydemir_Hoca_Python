@@ -1,0 +1,32 @@
+import random
+
+tarih=None
+
+def RandomSayiUret():
+    """Bu Fonksiyon 2000-2025 yılları arasında rastgele tarih ve saat üretir"""
+    #sayi=random.random()
+
+    yil=random.randint(2000,2025)
+    ay=random.randint(1,12)
+    gun = random.randint(1, 30)
+
+    saat=random.randint(00,23)
+    dakika=random.randint(00,59)
+
+    tarih = gun+ "." +ay+ "." +yil+"."+saat+"."+dakika
+    #global tarih
+    #return tarih
+    print(tarih)
+
+def dosyayaYaz():
+    """parametre olarak verilen dosyaadi tam yoldur. Bu yoldaki dosyaya ikinci parametre olan metni yazar."""
+    f=open("tarih.txt","a")
+
+    f.write(tarih)
+    f.close()
+
+RandomSayiUret()
+#dosyayaYaz(tarih)
+
+
+RandomSayiUret()
