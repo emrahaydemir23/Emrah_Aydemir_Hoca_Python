@@ -1,0 +1,23 @@
+import random
+
+sayi=random.random()
+print(sayi)
+
+sayi=random.uniform(0.5,1.9)
+print(sayi)
+
+sayi=random.randint(1,10)
+print(sayi)
+
+sayi=random.randrange(10)#0-9 arasında rastgele üret
+
+dizi=["armut", "elma","muz","portakal"]
+#dizi="Kocaeli Belediyesi"
+secim=random.choice(dizi)
+print(secim)
+
+secimListesi = random.sample(dizi, 2)
+print(secimListesi)
+
+random.shuffle(dizi)
+print(dizi)
